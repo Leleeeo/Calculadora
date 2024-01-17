@@ -1,25 +1,38 @@
-const previousOperatorText = document.querySelector("#previousOperator");
-const currentOperatorText = document.querySelector("#currentOperator");
+const previousOperationText = document.querySelector("#previousoperation");
+const currentOperationText = document.querySelector("#currentoperation");
+const buttons = document.querySelectorAll("#buttonscontainer button");
 
 class calculator {
-  constructor(previousOperatorText, currentOperatorText) {
-    this.previousOperatorText = previousOperatorText;
-    this.currentOperatorText = currentOperatorText;
-    this.currentOperartion = "";
+  constructor(previousOperationText, currentOperationText) {
+    this.previousOperationText = previousOperationText;
+    this.currentOperationText = currentOperationText;
+    this.currentOperation = "";
   }
-  //add digit to calculator screen
+  //adiciona os digitos na tela da calculadora
   addDigit(digit) {
-    this.currentOperartion += digit;
+    if (digit === "." && this.currentOperationText.innerText.includes(".")) {
+      return;
+    }
+
+    this.currentOperation = digit;
     this.updateScreen();
   }
 
-  // Change values of calculator screen
+  //process all calculator operations
+  processOperation(operation) {
+    // get current and previous value
+    let opeartionValue
+    let previous = +this.previousOperationText.innerText;
+    let currrent = +this.currentOperationText.innerText;
+  }
+
+  //
   updateScreen() {
-    this.currentOperatorText.innerText += this.currentOperartion;
+    this.currentOperationText.innerText += this.currentOperation;
   }
 }
 
-const calc = new calculator(previousOperatorText, currentOperatorText);
+const calc = new calculator(previousOperationText, currentOperationText);
 
 buttons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
@@ -27,8 +40,6 @@ buttons.forEach((btn) => {
 
     if (+value >= 0 || value === ".") {
       calc.addDigit(value);
-    } else {
-      console.log("op:" + value);
-    }
+    } else calc.processOperation(value);
   });
 });

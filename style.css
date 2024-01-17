@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #09090b;
+  padding: 48px;
+}
+
+#h3 {
+  font-weight: 300;
+  font-size: 14px;
+  color: #52525b;
+}
+
+#calc {
+  width: 320px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: #18181b;
+  color: #000;
+  border-radius: 0.25rem;
+}
+
+#operations {
+  text-align: right;
+}
+
+#previousoperation {
+  color: #3f3f46;
+  word-break: break-all;
+  padding: 4px;
+  min-height: 24px;
+}
+
+#currentoperation {
+  min-height: 24px;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  word-break: break-all;
+  color: #a1a1aa;
+  padding: 4px;
+}
+
+#buttonscontainer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4px;
+}
+
+.button1 {
+  border: 1px solid;
+  border: transparent;
+  border-radius: 9999px;
+  height: 64px;
+  font-size: 20px;
+  background-color: rgb(161 161 170);
+  cursor: pointer;
+}
+
+.button1:hover {
+  background-color: rgb(113 113 122);
+  border-color: rgb(228 228 231);
+}
+
+.del {
+  border: 1px solid;
+  border: transparent;
+  border-radius: 9999px;
+  height: 64px;
+  font-size: 20px;
+  background-color: #3f3f46;
+  cursor: pointer;
+}
+
+.del:hover {
+  background-color: rgb(113 113 122);
+  border-color: rgb(228 228 231);
+}
+
+.op {
+  border: 1px solid;
+  border: transparent;
+  border-radius: 9999px;
+  height: 64px;
+  font-size: 24px;
+  background-color: rgb(239 68 68);
+  cursor: pointer;
+  padding-bottom: 4px;
+}
+
+.op:hover {
+  background-color: rgb(127 29 29);
+  border-color: rgb(228 228 231);
+}
+
+#btn-equal {
+  border: 1px solid;
+  border: transparent;
+  border-radius: 9999px;
+  height: 64px;
+  font-size: 24px;
+  background-color: rgb(239 68 68);
+  cursor: pointer;
+  padding-bottom: 4px;
+  grid-column: span 2 / span 2;
+}
+
+#btn-equal:hover {
+  background-color: rgb(127 29 29);
+  border-color: rgb(228 228 231);
+}
