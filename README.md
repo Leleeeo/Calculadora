@@ -1,4 +1,4 @@
 <h1>Calculadora</h1>
 
-<p>Fiz apenas o básico por enquanto. Estou usando html, css e javascript</p>
+<p>Calculadora básica. HTML, CSS e JS</p>
 
